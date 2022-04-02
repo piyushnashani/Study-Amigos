@@ -1,0 +1,28 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<style>
+    .profile-container{
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+    }
+</style>
+
+<h1>{{user.username}}</h1>
+
+<div class="profile-container">
+    <div>
+        {% include 'base/topics_component.html' %}
+    </div>
+    
+    <div>
+        {% include 'base/feed_component.html' %}                    <!-- we did it here because the context dictionary passed in the profile, the same dictionary will be passed to the feed_component.html and we will be seeing only the rooms or feed associated with user associated with the profile -->
+    </div>
+        
+    <div>
+        {% include 'base/activity_component.html' %}
+    </div>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,32 @@
+{% extends 'main.html' %}
+{% block content %}
+
+<style>
+    .home-container{
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+    }
+</style>
+
+<h2>
+    home
+</h2>
+<div>
+    <div class="home-container">
+        <div>
+            {% include 'base/topics_component.html' %}                      <!--doing thid for organising in more better way where we can get (if we want) the recent activity of those user whom we want and we can do that here but making another file will make tas easier for us-->
+        </div>
+        <div>
+            <h5>{{room_count}} rooms available</h5>
+            <a href="{% url 'create-room' %}">Create Room</a>
+            {% include 'base/feed_component.html' %}
+        </div>
+        <div>
+            {% include 'base/activity_component.html' %}
+        </div>
+    
+</div>
+</div>
+
+
+{% endblock content %}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Coolrooms</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    </head>
+    <body>
+        <h1>
+            Cool rooms
+        </h1>
+        <div id="rooom-container"></div>
+    </body>                                                                             <!--now in script we have made a function getrooms in which we use javascript to call all our room data in the console and  it won't work unless and until we use cors headers(we need to first install it) because its like somoe random user is trying to user data from our website and djnago wil stop it so to allow it we use cors headers and we can manage on our own that whom do we can allow to fetch the data -->
+    <script>
+        let roomscontainer = document.getElementById('rooms-container')
+        let getRooms = async () =>{                                                                     
+            let response = await fetch('http://127.0.0.1:8000/api/rooms/')
+            let rooms= await response.json()                                            // it will take the rooms data    
+            //console.log('rooms:', rooms)                                                // will load the data into console  
+            for (let i=0; rooms.length>i; i++){
+                let room=rooms[i]
+                let row= `<div>
+                    <h3>${room.name}</h3>
+                    </div>`
+                roomscontainer.innerHTML +=row
+            }
+        }
+        getRooms()
+    </script>
+</html>

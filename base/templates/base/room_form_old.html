@@ -1,0 +1,11 @@
+{%extends 'main.html' %}
+
+{% block content %}
+
+<form method="POST" action="">
+    {% csrf_token %}
+    {{form.as_p}}                                    <!--we can just keep form also but form.as_p will make it like a para style.-->
+    <input type="submit" value="Submit"/>
+</form>
+
+{% endblock content %}

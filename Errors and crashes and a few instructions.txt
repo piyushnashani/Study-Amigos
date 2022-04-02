@@ -1,0 +1,4 @@
+create room is the room form template
+
+If we delete user from the sdmin then we have to delete all the rooms
+made by that user otherwise in many files e.g. feed_components. It won't be able to find the room.host.id and will continuously give error unless and until we delete all the rooms that are made by the user whose account we deleted.
