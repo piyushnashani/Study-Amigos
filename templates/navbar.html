@@ -3,7 +3,7 @@
 <header class="header header--loggedIn">
     <div class="container">
       <a href="{% url 'home' %}" class="header__logo">      <!--specifying the url on logo -->
-        <img src="{% static 'images/logo.svg' %}" />
+        <img src="{% static 'images/logo.jpg' %}" />
         <h1>Study-Amigos</h1>
       </a>
       <form class="header__search" method="GET" action="{% url 'home' %}">      <!--We have specified the method to the search bar here and also where the info that we sent on search bar should be sent-->
