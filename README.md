@@ -1,6 +1,6 @@
 # Study-Amigos
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/63044831/161405884-2cfcbd9e-bb62-4886-b41a-b6faeeb9046c.png"/>
+<p align="center"> 
+  <img src="https://user-images.githubusercontent.com/63044831/161406628-89fcd244-d30a-4085-a319-010908071d27.png"/>
 </p>
 <br>
 Study-Amigos is a website where students from across the world can study together, share resources and ideas, and even get their queries answered. Users may create rooms for any topics they wish to learn, and other users or interested audiences can join those rooms to study and interact with one another using chatbox. They can also make their profiles appealing so that other students can learn about them and decide whether or not they want to study with them. The site is protected by a log-in mechanism, and users may sign up using their Gmail accounts.<br>
