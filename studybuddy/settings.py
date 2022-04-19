@@ -61,10 +61,9 @@ ROOT_URLCONF = 'studybuddy.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [
-            BASE_DIR /'templates'
-        ]                      ###Basedir- main directory inside which we have our project as well as our app
-        ,
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+                           ###Basedir- main directory inside which we have our project as well as our app
+        
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
